@@ -37,3 +37,7 @@ get '/authorize' do
   @code = params[:code]
   haml :authorize
 end
+
+# for the future
+# something like
+# https://developer.github.com/guides/basics-of-authentication/#implementing-persistent-authentication
