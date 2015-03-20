@@ -13,7 +13,10 @@
 %script{ src: "http://malsup.github.com/jquery.form.js" }
 
 :javascript
-  $('#auth').ajaxForm(function() {
-    $('#results').append("<h2>you are authorizzed!</h2>");
+  $('#auth').ajaxForm({
+    success: function(response, status, xhr) {
+      $('#results').append("<h2>you are authorized!</h2>");
+    }
   });
   $('#auth').trigger('submit');
+
